@@ -144,8 +144,8 @@ body.menu-open {
 }
 
 @media (max-width: 768px) {
-  .section-padding { padding: 4rem 5%; }
-  .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 3rem; }
+  .section-padding { padding: 3rem 1.5rem; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 2rem; }
   .nav-links { display: none !important; }
   .mobile-menu-btn { display: flex !important; margin-left: auto; }
   
@@ -153,16 +153,32 @@ body.menu-open {
   .cursor-dot, .cursor-ring { display: none !important; }
   
   /* Reset responsive typography */
-  h2 { font-size: 2rem !important; }
-  .italic-serif { font-size: 1.2rem !important; }
+  h2 { font-size: 1.8rem !important; }
+  .italic-serif { font-size: 1.1rem !important; }
   
   /* Footer mobile fixes */
   .footer-flex { flex-direction: column; gap: 2rem !important; text-align: left !important; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
   
   /* Hero adjustments */
-  .hero-monogram { width: 200px !important; height: 200px !important; }
-  .masonry-grid { display: flex !important; flex-direction: column; }
+  .hero-monogram { width: 150px !important; height: 150px !important; }
+  
+  /* Mobile Swipe Containers */
+  .mobile-swipe {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem !important;
+    padding-bottom: 2rem;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+  .mobile-swipe::-webkit-scrollbar { display: none; }
+  .mobile-swipe > div {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
 }
 
 /* Gallery & Effects */

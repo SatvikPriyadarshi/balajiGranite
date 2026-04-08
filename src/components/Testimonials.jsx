@@ -15,13 +15,13 @@ const Testimonials = () => {
           <h2 style={{ fontSize: '3rem', marginTop: '1rem', marginBottom: '4rem' }}>Client Words</h2>
         </motion.div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
+        <div className="mobile-swipe" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ padding: '4rem', border: '1px solid var(--border-copper)', position: 'relative', textAlign: 'left' }}
+            style={{ padding: '3rem 2rem', border: '1px solid var(--border-copper)', position: 'relative', textAlign: 'left', background: 'var(--bg-dark)' }}
           >
             <div style={{ position: 'absolute', top: '-25px', left: '40px', background: 'var(--bg-dark)', padding: '0 15px' }}>
               <svg viewBox="0 0 24 24" style={{ width: '40px', height: '40px', fill: 'var(--copper)' }}>
@@ -43,9 +43,9 @@ const Testimonials = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            style={{ padding: '4rem', border: '1px solid var(--border-copper)', position: 'relative', textAlign: 'left' }}
+            style={{ padding: '3rem 2rem', border: '1px solid var(--border-copper)', position: 'relative', textAlign: 'left', background: 'var(--bg-dark)' }}
           >
             <div style={{ position: 'absolute', top: '-25px', left: '40px', background: 'var(--bg-dark)', padding: '0 15px' }}>
               <svg viewBox="0 0 24 24" style={{ width: '40px', height: '40px', fill: 'var(--copper)' }}>

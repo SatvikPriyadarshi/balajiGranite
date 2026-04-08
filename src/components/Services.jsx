@@ -25,7 +25,7 @@ const Services = () => {
           <h2 style={{ fontSize: '3rem', marginTop: '1rem' }}>Exquisite Collections</h2>
         </motion.div>
         
-        <div style={{ 
+        <div className="mobile-swipe" style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
           gap: '2px', 
@@ -37,12 +37,12 @@ const Services = () => {
               key={item.num}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "0px 0px -50px 0px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               whileHover={{ y: -10, backgroundColor: 'var(--bg-dark)', zIndex: 10, boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}
               style={{
                 background: 'var(--bg-light)',
-                padding: '4rem 3rem',
+                padding: '3rem 2rem',
                 position: 'relative',
                 transition: 'background-color 0.4s ease'
               }}
