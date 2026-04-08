@@ -160,8 +160,21 @@ body.menu-open {
   .footer-flex { flex-direction: column; gap: 2rem !important; text-align: left !important; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
   
-  /* Hero adjustments */
-  .hero-monogram { width: 150px !important; height: 150px !important; }
+  /* Hero & Button adjustments */
+  .hero-monogram { width: 140px !important; height: 140px !important; }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    gap: 1rem !important;
+  }
+  .btn {
+    padding: 1rem 1rem !important;
+    font-size: 0.75rem !important;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px !important;
+  }
   
   /* Mobile Swipe Containers */
   .mobile-swipe {

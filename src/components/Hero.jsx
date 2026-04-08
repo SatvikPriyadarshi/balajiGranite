@@ -86,7 +86,7 @@ const Hero = () => {
               transition: { staggerChildren: 0.1, delayChildren: 0.4 }
             }
           }}
-          style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center', textShadow: '0px 10px 20px rgba(0,0,0,0.8)' }}
+          style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center', textShadow: '0px 4px 15px rgba(0,0,0,1)', fontSize: 'clamp(1.2rem, 5vw, 1.8rem)', color: '#fff' }}
         >
           {['Timeless', 'Splendor,', 'Crafted', 'from', 'Nature.'].map((word) => (
             <motion.span 
@@ -105,6 +105,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
+          className="hero-buttons"
           style={{ display: 'flex', gap: '1.5rem', marginTop: '2rem' }}
         >
           <a href="#collections" className="btn btn-fill">Explore Collections</a>
