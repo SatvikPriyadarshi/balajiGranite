@@ -18,7 +18,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
+}
+
+html {
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -90,7 +95,18 @@ a, button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: none;
+  cursor: pointer;
+}
+.collection-card {
+  position: relative;
+  overflow: hidden;
+}
+.collection-card .card-overlay {
+  background: rgba(13, 13, 13, 0.85); /* Increased image visibility */
+  transition: all 0.5s ease;
+}
+.collection-card:hover .card-overlay {
+  background: rgba(13, 13, 13, 0.65); /* Vibrant hover */
 }
 .btn::before {
   content: '';
@@ -128,17 +144,27 @@ a, button {
   z-index: 9999;
   opacity: 0.04;
   background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+  transform: translateZ(0); /* Hardware accelerate layer */
+  will-change: transform;
 }
 
 /* --- RESPONSIVE UTILITIES --- */
 
-.grid-2 { grid-template-columns: 1fr 1fr; gap: 5rem; }
-.grid-3 { grid-template-columns: repeat(3, 1fr); gap: 5rem; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5rem; }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border-copper);
+  border: 1px solid var(--border-copper);
 }
 
 /* Mobile Menu Variables */
@@ -149,6 +175,7 @@ body.menu-open {
 @media (max-width: 1024px) {
   .section-padding { padding: 6rem 5%; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+  .collections-grid { grid-template-columns: repeat(2, 1fr); }
   h2 { font-size: 2.5rem !important; }
 }
 
@@ -164,6 +191,9 @@ body.menu-open {
   /* Reset responsive typography */
   h2 { font-size: 1.8rem !important; }
   .italic-serif { font-size: 1.1rem !important; }
+
+  /* Instantly fix mobile lagging caused by massive SVG GPU processing */
+  .noise-overlay { display: none !important; }
   
   /* Footer mobile fixes */
   .footer-flex { flex-direction: column; gap: 2rem !important; text-align: left !important; }

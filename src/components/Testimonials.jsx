@@ -64,6 +64,23 @@ const Testimonials = () => {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          style={{ marginTop: '4rem', display: 'flex', justifyContent: 'center' }}
+        >
+          <a 
+            href="https://share.google/1nQtF8qxn1ozELURq" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-fill"
+          >
+            Review Us on Google
+          </a>
+        </motion.div>
       </div>
     </section>
   );

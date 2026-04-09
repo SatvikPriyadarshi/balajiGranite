@@ -18,7 +18,7 @@ const About = () => {
           <span className="ui-label">Our Legacy</span>
           <h2 style={{ fontSize: '3.5rem', marginBottom: '2rem', marginTop: '1rem' }}>Salem's Trusted Granite & Marble Dealers</h2>
           <p style={{ fontSize: '1.2rem', lineHeight: 1.8, color: 'var(--text-muted)', marginBottom: '2rem' }}>
-            At Shree Balaji Granite, we bring you the earth's most spectacular natural canvases. Operating as the premier granite shop in Salem, our three decades of unrivaled expertise ensures ethically sourced, high-grade stones for every architectural dream.
+            At Shree Balaji Granite, guided by the vision of Owner <strong style={{ color: 'var(--text-main)', fontWeight: 600 }}>Sohan Mali</strong>, we bring you the earth's most spectacular natural canvases. Operating as the premier granite shop in Salem, our three decades of unrivaled expertise ensures ethically sourced, high-grade stones for every architectural dream.
           </p>
           <p style={{ fontSize: '1.2rem', lineHeight: 1.8, color: 'var(--text-muted)', marginBottom: '2rem' }}>
             We provide all varieties of best quality stones, expertly crafting nature's finest gifts. We are the leading Kota stone suppliers near you, and our premium collections include:
