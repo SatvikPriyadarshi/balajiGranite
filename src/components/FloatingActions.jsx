@@ -18,7 +18,7 @@ const FloatingActions = () => {
   }, []);
 
   const waText = "Hello Shree Balaji Granite Team, I am interested in your luxury stone collections and would like to know more.";
-  const waUrl = `https://wa.me/916369695257?text=${encodeURIComponent(waText)}`;
+  const waUrl = `https://wa.me/919362821935?text=${encodeURIComponent(waText)}`;
   
   const mailSubject = "Inquiry - Shree Balaji Granite";
   const mailBody = "Hello Shree Balaji Granite Team,\n\nI am interested in your products and would like more information.\n\nRegards,";
