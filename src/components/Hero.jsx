@@ -24,6 +24,7 @@ const Hero = () => {
         <motion.img
           key={currentIndex}
           src={images[currentIndex]}
+          alt="Premium Marble and Granite Dealer in Salem"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
@@ -75,7 +76,7 @@ const Hero = () => {
           }} />
         </motion.div>
 
-        <motion.div 
+        <motion.h1 
           className="italic-serif"
           initial="hidden"
           animate="visible"
@@ -86,9 +87,9 @@ const Hero = () => {
               transition: { staggerChildren: 0.1, delayChildren: 0.4 }
             }
           }}
-          style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center', textShadow: '0px 4px 15px rgba(0,0,0,1)', fontSize: 'clamp(1.2rem, 5vw, 1.8rem)', color: '#fff' }}
+          style={{ margin: 0, display: 'flex', gap: '0.4rem', flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center', textShadow: '0px 4px 15px rgba(0,0,0,1)', fontSize: 'clamp(1.2rem, 5vw, 1.8rem)', color: '#fff', fontWeight: 'normal' }}
         >
-          {['Timeless', 'Splendor,', 'Crafted', 'from', 'Nature.'].map((word) => (
+          {['Premium', 'Granite', '&', 'Marble', 'Dealers', 'in', 'Salem'].map((word) => (
             <motion.span 
               key={word}
               variants={{
@@ -99,7 +100,7 @@ const Hero = () => {
               {word}
             </motion.span>
           ))}
-        </motion.div>
+        </motion.h1>
 
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

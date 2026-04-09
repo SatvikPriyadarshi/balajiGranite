@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import Gallery from './components/Gallery';
+import FloatingActions from './components/FloatingActions';
 import Lenis from '@studio-freight/lenis';
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Services />
         <Testimonials />
       </main>
+      <FloatingActions />
       <Footer />
     </>
   );

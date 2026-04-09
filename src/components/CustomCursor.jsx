@@ -31,6 +31,11 @@ const CustomCursor = () => {
     };
   }, []);
 
+  // Optionally hide on small screens or touch devices as a fallback
+  if (typeof window !== 'undefined' && window.matchMedia("(pointer: coarse)").matches) {
+    return null;
+  }
+
   return (
     <>
       <motion.div

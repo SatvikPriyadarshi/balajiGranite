@@ -53,7 +53,7 @@ const Services = () => {
                 transition: 'transform 0.5s ease'
               }} className="hover-line" />
               
-              <span style={{ fontFamily: 'var(--font-ui)', fontSize: '1rem', color: 'var(--border-copper)', marginBottom: '2rem', display: 'block' }}>
+              <span style={{ fontFamily: 'var(--font-ui)', fontSize: '1rem', color: 'var(--copper)', marginBottom: '2rem', display: 'block' }}>
                 {item.num}
               </span>
               <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', fontFamily: 'var(--font-display)' }}>{item.title}</h3>
